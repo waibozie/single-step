@@ -1,0 +1,66 @@
+# Run command below to format a file
+# clang-format -i --style=file <file>
+
+# complete clang-format rule, reference:
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+# WebKit format rule details, reference:
+#   https://webkit.org/code-style-guidelines/
+#   https://gitee.com/mirrors/WebKit/blob/main/.clang-format
+BasedOnStyle: Webkit
+# works on C and C++ files
+Language: Cpp
+Standard: Latest
+
+ColumnLimit: 120
+UseTab: Never
+TabWidth: 4
+IndentWidth: 4
+AccessModifierOffset: -4
+PointerAlignment: Right
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+AlignConsecutiveMacros: Consecutive
+IndentCaseLabels: true
+BreakBeforeBraces: Linux
+BreakBeforeBinaryOperators: None
+BreakConstructorInitializers: AfterColon
+BreakTemplateDeclarations: Yes
+BreakBeforeTernaryOperators: true
+BreakInheritanceList: BeforeColon
+SpaceBeforeParens: ControlStatementsExceptControlMacros
+SpacesInCStyleCastParentheses: false
+SpaceAroundPointerQualifiers: Both
+SpaceAfterCStyleCast: true
+SpaceBeforeAssignmentOperators: true
+SpacesInAngles: false
+SpacesInContainerLiterals: true
+SpacesInParentheses: false
+AlignEscapedNewlines: Left
+AlignArrayOfStructures: Left
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Empty
+FixNamespaceComments: true
+# iterator macros declaration，avoid being treated as function call
+ForEachMacros:
+  - 'LIST_FOR_EACH_ENTRY'
+  - 'LIST_FOR_EACH_ENTRY_SAFE'
+  - 'LIST_FOR_EACH'
+  - 'LIST_FOR_EACH_SAFE'
+SortIncludes: CaseInsensitive
+AllowShortEnumsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AlignAfterOpenBracket: true
+AlignOperands: true
+BinPackArguments: false
+BinPackParameters: false
+IncludeBlocks: Regroup
+IndentPPDirectives: AfterHash
+NamespaceIndentation: All
+ReflowComments: Always
+SortUsingDeclarations: true
+SpacesBeforeTrailingComments: 3
+
+

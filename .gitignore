@@ -1,0 +1,24 @@
+# ignore all compiled output files
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+
+# ignore debug and release directories
+build/
+Debug/
+Release/
+cmake-build-debug/
+
+# ignore temporary files
+*.tmp
+*.bak
+*.swp
+
+# ignore editor/IDE related files
+.vscode/
+.idea/
